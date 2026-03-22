@@ -70,3 +70,12 @@ button:hover {
     font-size: 18px;
     color: #2c3e50;
 }
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, button {
+    width: 100%;
+}
