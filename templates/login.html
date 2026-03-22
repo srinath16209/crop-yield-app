@@ -6,11 +6,18 @@
     <link rel="stylesheet" href="./../static/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            background-image: url(./../static/Agriculture.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+       body {
+    background-image: url(./../static/Agriculture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
         body>h2 {
             color: green;
@@ -26,7 +33,15 @@
             font-size: 25px;
             color: rgb(73, 180, 212);
             padding: 50px;
+                width: 90%;
+    max-width: 400px;
+    margin: auto;
+
         }
+        .register-link {
+    text-align: center;
+    margin-top: 10px;
+}
 
         .col>form>input {
             border-radius: 20px;
@@ -51,6 +66,12 @@
         padding: 15px;
         font-size: 18px;
     }
+    @media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+}
 }
     </style>
 </head>
@@ -59,12 +80,18 @@
     <h2>Login</h2>
     <div class="col">
         <form method="POST">
-            Email: <input type="text" name="email" placeholder="Enter Your Email"><br>
-            Password: <input type="password" name="password" placeholder="Enter Your Password"><br>
-            <button type="submit">Login</button>
-        </form>
+    Email: <input type="text" name="email">
+    Password: <input type="password" name="password">
+
+    <button type="submit">Login</button>
+
+    <p class="register-link">
+        Don't have an account?
+        <a href="{{ url_for('register') }}">Register here</a>
+    </p>
+</form>
     </div>
-    <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+   
 </body>
 
 </html>

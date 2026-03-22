@@ -5,11 +5,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-     body {
-            background-image: url(./../static/Agriculture.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+    body {
+    background-image: url(./../static/Agriculture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
          body>h2 {
             color: green;
             font-size: 40px;
@@ -30,7 +35,14 @@
             font-size: 25px;
             color: #1565c0;
             padding: 30px;
+               width: 90%;
+    max-width: 400px;
+    margin: auto;
         }
+        .login-link {
+    margin-top: 10px;
+    text-align: center;
+}
 
         form>input {
             border-radius: 20px;
@@ -52,22 +64,38 @@
             font-weight: bold;   
         }
         @media (max-width: 768px) {
+            
     form {
         width: 90% !important;
         padding: 15px;
         font-size: 18px;
     }
+    @media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+}
 }
 </style>
 </head>
 <body>
     <h2>Register</h2>
     <form method="POST">
-        Name: <input type="text" name="name" placeholder="Enter Your Name"><br>
-        Email: <input type="text" name="email" placeholder="Enter Your Email"><br>
-        Password: <input type="password" name="password" placeholder="Enter Password"><br>
-        <button type="submit">Register</button>
-    </form>
-    <p>Already registered? <a href="{{ url_for('login') }}">Login here</a></p>
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Enter Your Name">
+
+    <label>Email:</label>
+    <input type="text" name="email" placeholder="Enter Your Email">
+
+    <label>Password:</label>
+    <input type="password" name="password" placeholder="Enter Password">
+
+    <button type="submit">Register</button>
+
+    <p class="login-link">
+        Already registered? <a href="{{ url_for('login') }}">Login here</a>
+    </p>
+</form>
 </body>
 </html>

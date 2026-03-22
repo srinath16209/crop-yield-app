@@ -10,26 +10,34 @@
         *{
             padding: 0;
         }
+        .row {
+    margin-top: 20px;
+}
         body {
             background-image: url(./../static/Agriculture.png);
             background-repeat: no-repeat;
             background-size: cover;
+             
         }
 
-        .row>.col-2 {
-            display: inline-flex;
-            flex-direction: row;
-            width: 100%;
-            height: 70px;
-            border: 2px solid green;
-            border-top: 0;
-            justify-content: space-between;
-        }
+       .row>.col-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.1);
+}
 
-        .col-2>h1 {
-            color:#1565C0;
-            padding-left: 10px;
-        }
+       .col-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-2 > h1 {
+    margin: 0;
+    text-align: left;
+}
 
         .col-2>nav {
             margin: auto 0;
@@ -53,17 +61,20 @@
             color: white;
             font-weight: bold;
         }
-        .row>.col{
-            display: flex;
-            justify-content: center;
-            padding: 25px;border-radius: 10px;
-            width: 70%;
-            margin: 40px auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            line-height: 1.8;
-        }
+        .row>.col {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 40px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    line-height: 1.8;
+     background-color: rgba(255, 255, 255, 0.85); /* white transparent */
+    backdrop-filter: blur(5px); /* optional smooth effect */
+}
         .row>.col>p{
-            color:#555555;
+            color: #222;
            font-size: 1.5rem;
            font-display:block;
         }
@@ -71,18 +82,23 @@
             color: #607D8B;
             font-weight: 600;
         }
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
     .col-2 {
         flex-direction: column;
-        height: auto;
-        text-align: center;
+        align-items: center;
     }
 
     .col-2 nav {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        width: 100%;
     }
+
+    .col-2 nav a {
+        margin: 5px 0;
+    }
+
+
 }
     </style>
 </head>

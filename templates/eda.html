@@ -6,26 +6,62 @@
     <style>
         
      body {
-            background-image: url(./../static/Agriculture.png);
-            background-repeat: no-repeat;
-           
-        }
-        body>div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    background-image: url(./../static/Agriculture.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.eda-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+        .eda-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.eda-container a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+@media (max-width: 768px) {
+    .eda-container {
+        width: 90%;
+    }
+
+    .eda-container img {
+        width: 100%;
+    }
+}
 
 
 </style>
 </head>
 <body>
-    <div>
+    <div class="eda-container">
     <h2>Exploratory Data Analysis (EDA)</h2>
     <p>Here is a sample visualization:</p>
     <img src="{{ url_for('static', filename='eda_plot.png') }}" alt="EDA Plot">
     <br><br>
     <a href="/">Back to Home</a>
-    </div>
+</div>
 </body>
 </html>
