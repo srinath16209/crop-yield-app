@@ -53,9 +53,9 @@
     <h2>Prediction Results</h2>
 
     <p>
-        <strong>Random Forest Prediction:</strong> {{ prediction }} ton/hectare <br>
+        <!-- <strong>Your Predicion Fields:</strong> {{ prediction }} ton/hectare <br> -->
         <strong>Hectares:</strong> {{ hectares }} <br>
-        <strong>Total Production (tons):</strong> {{ total_production }}
+        <strong>Total Production (tons):</strong> {{ results['CatBoost'] }}
     </p>
 
     {% if user_yield %}
@@ -70,7 +70,7 @@
             <th>Model</th>
             <th>Predicted Yield (ton/hectare)</th>
         </tr>
-        <tr><td>Random Forest</td><td>{{ results['RandomForest'] }}</td></tr>
+        <!-- <tr><td>Random Forest</td><td>{{ results['RandomForest'] }}</td></tr> -->
          <!-- <tr><td>XGBoost</td><td>{{ results['XGBoost'] }}</td></tr> -->
         <tr><td>CatBoost</td><td>{{ results['CatBoost'] }}</td></tr>
         <!-- <tr><td>ANN</td><td>{{ results['ANN'] }}</td></tr> -->
