@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare Model Predictions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        h2 {
+            text-align: center;
+        }
+     body {
+            background-image: url(./../static/Agriculture.png);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h2>Model Comparison Results</h2>
+
+    <table>
+        <tr>
+            <th>Model</th>
+            <th>Predicted Yield (ton/hectare)</th>
+        </tr>
+        <tr>
+            <td>Random Forest</td>
+            <td>{{ results['RandomForest'] }}</td>
+        </tr>
+        <tr>
+            <td>XGBoost</td>
+            <td>{{ results['XGBoost'] }}</td>
+        </tr>
+        <tr>
+            <td>CatBoost</td>
+            <td>{{ results['CatBoost'] }}</td>
+        </tr>
+        <tr>
+            <td>ANN</td>
+            <td>{{ results['ANN'] }}</td>
+        </tr>
+    </table>
+
+    <p style="text-align:center;">
+        <strong>Hectares:</strong> {{ hectares }} <br>
+        <strong>Total Production (tons):</strong> {{ total_production }}
+    </p>
+
+    {% if user_yield %}
+    <p style="text-align:center;">
+        <strong>User Provided Yield:</strong> {{ user_yield }}
+    </p>
+    {% endif %}
+
+    <div style="text-align:center;">
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

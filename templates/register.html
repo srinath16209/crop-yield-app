@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+     body {
+            background-image: url(./../static/Agriculture.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+         body>h2 {
+            color: green;
+            font-size: 40px;
+        }
+         button{
+            background-color: #1565c0;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1.2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 25px;
+            color: #1565c0;
+            padding: 30px;
+        }
+
+        form>input {
+            border-radius: 20px;
+            background-color:rgb(250, 241, 229);
+            
+        }
+         p{
+            font-size: 20px;
+            color:#02010a;
+        }
+        button:hover{
+              padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            font-weight: bold;   
+        }
+</style>
+</head>
+<body>
+    <h2>Register</h2>
+    <form method="POST">
+        Name: <input type="text" name="name" placeholder="Enter Your Name"><br>
+        Email: <input type="text" name="email" placeholder="Enter Your Email"><br>
+        Password: <input type="password" name="password" placeholder="Enter Password"><br>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already registered? <a href="{{ url_for('login') }}">Login here</a></p>
+</body>
+</html>

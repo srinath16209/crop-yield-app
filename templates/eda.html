@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDA Dashboard</title>
+    <style>
+     body {
+            background-image: url(./../static/Agriculture.png);
+            background-repeat: no-repeat;
+           
+        }
+        body>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+</style>
+</head>
+<body>
+    <div>
+    <h2>Exploratory Data Analysis (EDA)</h2>
+    <p>Here is a sample visualization:</p>
+    <img src="{{ url_for('static', filename='eda_plot.png') }}" alt="EDA Plot">
+    <br><br>
+    <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

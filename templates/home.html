@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crop Yield Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="./../Bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <style>
+        *{
+            padding: 0;
+        }
+        body {
+            background-image: url(./../static/Agriculture.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .row>.col-2 {
+            display: inline-flex;
+            flex-direction: row;
+            width: 100%;
+            height: 70px;
+            border: 2px solid green;
+            border-top: 0;
+            justify-content: space-between;
+        }
+
+        .col-2>h1 {
+            color:#1565C0;
+            padding-left: 10px;
+        }
+
+        .col-2>nav {
+            margin: auto 0;
+        }
+
+        .col-2>nav>a {
+            border: 2px solid gray;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color:#43A047;
+            transition:all 0.3s ease;
+        }
+        .col-2>nav>a:hover{
+              padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            font-weight: bold;
+        }
+        .row>.col{
+            display: flex;
+            justify-content: center;
+            padding: 25px;border-radius: 10px;
+            width: 70%;
+            margin: 40px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+        .row>.col>p{
+            color:#555555;
+           font-size: 1.5rem;
+           font-display:block;
+        }
+        p>span{
+            color: #607D8B;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-2">
+            <h1>Crop Yield Prediction System</h1>
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+                <a href="/predict">Predict</a>
+                <a href="/eda">EDA Dashboard</a>
+
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>
+
+                Welcome to the Smart Crop Yield Prediction System — a platform designed to empower farmers, researchers,
+                and agricultural planners with accurate insights into crop performance.Using advanced machine learning
+                models such as <span> Random Forest, XGBoost, CatBoost, and Artificial Neural Networks</span>, our system analyzes
+                soil nutrients, weather conditions, and farming practices to predict yields with precision.
+                Agriculture is the backbone of our economy, and making informed decisions about crop planning,
+                fertilizer use, and irrigation can significantly improve productivity. This tool helps bridge the gap
+                between data and sustainable farming.
+            </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

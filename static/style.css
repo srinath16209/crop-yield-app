@@ -1,0 +1,72 @@
+/* General page styling */
+*{
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Navigation links */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1abc9c;
+}
+
+/* Forms */
+form {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #ccc;
+    text-align: left;
+}
+
+form input {
+    width: 95%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Buttons */
+button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+/* Result display */
+.result {
+    background: #ecf0f1;
+    padding: 15px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #2c3e50;
+}
